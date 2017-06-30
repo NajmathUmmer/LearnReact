@@ -11,11 +11,16 @@
 var MyComponent = React.createClass({
 	render:function(){
 	return (
-	<h1>Hello world</h1>
+	<h1>I like to eat {this.props.food}</h1>
 	);
 	}
 });
-React.render(<MyComponent/>, document.getElementById('content'));
+React.render(
+<div>
+<MyComponent food ="chicken"/>
+<MyComponent food ="mutton"/>
+</div>,
+ document.getElementById('content'));
 </script>
 
 </body>
